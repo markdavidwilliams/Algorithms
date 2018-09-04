@@ -3,7 +3,15 @@
 import sys
 
 def climbing_stairs(n):
-  pass
+  hops = [0 for i in range(n + 2)]
+  hops[0], hops [1] = 1, 1
+
+  for i in range(2, n + 1):
+    j = 1
+    while j <= 3 and j <= i:
+      hops[i] = hops[i] + hops[i - j]
+      j += 1
+  return hops[n]
 
 
 if __name__ == "__main__":
