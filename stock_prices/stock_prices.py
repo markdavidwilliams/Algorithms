@@ -3,7 +3,9 @@
 import argparse
 
 def find_max_profit(prices):
-  pass 
+  low = min(prices)
+  high = max(prices)
+  return high - low
 
 
 if __name__ == '__main__':
